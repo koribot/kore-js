@@ -9,22 +9,22 @@
     "exports": {
         ".": {
             "development": {
-                "import": "./korjs.esm.dev.js",
+                "import": "./kore-js.esm.dev.js",
                 "require": "./dist/kore-js.dev.js",
                 "types": "./index.d.ts"
             },
             "production": {
-                "import": "./korjs.esm.prod.js",
+                "import": "./kore-js.esm.prod.js",
                 "require": "./dist/kore-js.js",
                 "types": "./index.d.ts"
             },
             "korejs-dev": {
-                "import": "./korjs.esm.dev.js",
+                "import": "./kore-js.esm.dev.js",
                 "require": "./dist/kore-js.dev.js",
                 "types": "./index.d.ts"
             },
             "default": {
-                "import": "./korjs.esm.prod.js",
+                "import": "./kore-js.esm.prod.js",
                 "require": "./dist/kore-js.js",
                 "types": "./index.d.ts"
             }
@@ -42,5 +42,12 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/koribot/kore-js.git"
-    }
+    },
+    "files": [
+        "dist",
+        "index.d.ts",
+        "kore-js.esm.dev.js",
+        "kore-js.esm.prod.js",
+        "main.js"
+    ]
 }

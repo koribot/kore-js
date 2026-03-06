@@ -1,0 +1,32 @@
+name: PUBLISH
+run-name: ${{ github.actor }} publish 🚀
+
+on:
+  push:
+    branches:
+      - main   # only publish from main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+          # scope: "@your-npm-scope"  # optional if using a scoped package
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run build
+        run: npm run build
+
+      - name: Publish to npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

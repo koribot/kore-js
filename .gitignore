@@ -2,7 +2,8 @@ node_modules
 
 *.md
 
-#kore-js/dist/*
+kore-js/dist/*
+!kore-js/dist/.gitkeep
 
 !README.md
 
