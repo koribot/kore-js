@@ -5,7 +5,12 @@ on:
   push:
     branches:
       - '**'
-
+    paths-ignore:
+      - '.github/**'
+      - '*.md'
+      - '.gitignore'
+      - '.prettierrc'
+      - 'LICENSE'
 jobs:
   build:
     runs-on: ubuntu-latest
