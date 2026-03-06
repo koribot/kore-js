@@ -7,8 +7,5 @@
     "license": "ISC",
     "dependencies": {
         "esbuild": "^0.27.3"
-    },
-    "files": [
-        "kore-js"
-    ]
+    }
 }
