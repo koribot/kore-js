@@ -6,11 +6,12 @@ on:
         branches:
             - '**'
         paths-ignore:
-            #- '.github/**'
+            - '.github/**'
             - '*.md'
             - '.gitignore'
             - '.prettierrc'
             - 'LICENSE'
+
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -42,6 +43,7 @@ jobs:
                   git config user.name "github-actions[bot]"
                   git config user.email "github-actions[bot]@users.noreply.github.com"
                   git add -f kore-js/dist/
+                  git add kore-js/README.md
                   git diff --staged --quiet || git commit -m "chore: update dist [skip ci]"
                   git push
               env:
@@ -50,5 +52,5 @@ jobs:
     publish:
         needs: build
         if: github.ref == 'refs/heads/main'
-        uses: ./.github/workflows/publish.yml # calls publish.yml
-        secrets: inherit # passes NPM_TOKEN through
+        uses: ./.github/workflows/publish.yml
+        secrets: inherit
