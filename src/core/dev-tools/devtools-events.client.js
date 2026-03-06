@@ -1,4 +1,4 @@
-// kore-js/devtools-events.client.js  (CLIENT ONLY)
+// koribot-js/devtools-events.client.js  (CLIENT ONLY)
 
 export function initEventsPanel() {
   const body = document.getElementById("kor-panel-events-body");

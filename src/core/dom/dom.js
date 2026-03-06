@@ -1,4 +1,4 @@
-// kore-js/dom.js
+// koribot-js/dom.js
 import { isStore } from '../store/store.js';
 // TODO: uncomment when client-side navigation (SPA) feature is implemented.
 // registerCleanup wires dom.js listeners into the scope system so they are
@@ -59,12 +59,12 @@ export function $(selector, props = {}) {
         if (el && _isDuplicate(el, eventName, handler)) {
             if (__DEV__) {
                 window?.__korDevtools?._devWarn?.(
-                    `[kore-js] (on) Duplicate listener ignored for event "${eventName}" on`,
+                    `[koribot-js] (on) Duplicate listener ignored for event "${eventName}" on`,
                     'DUPLICATE_EVENT',
                 );
             }
             console.warn(
-                `[kore-js] (on) Duplicate listener ignored for event "${eventName}" on`,
+                `[koribot-js] (on) Duplicate listener ignored for event "${eventName}" on`,
                 'DUPLICATE_EVENT',
             );
             return;
@@ -217,7 +217,7 @@ export function $(selector, props = {}) {
                             message: `Source should be a string or instance of KoreJsSafeHtml(raw``), but got ${typeof _html}\nsource: ${JSON.stringify(_html)}\nstore: ${JSON.stringify(source._devName)}\nkeyOrFn: ${keyOrTemplateFn}\nselector: ${selector}`,
                         });
                     throw new Error(
-                        `[kore-js] TYPE_MISMATCH: Source should be a string or instance of KoreJsSafeHtml(raw``), but got ${typeof _html}`,
+                        `[koribot-js] TYPE_MISMATCH: Source should be a string or instance of KoreJsSafeHtml(raw``), but got ${typeof _html}`,
                     );
                 }
                 el.innerHTML = _sanitize(_html);
@@ -278,7 +278,7 @@ export function $(selector, props = {}) {
                                 message: `conditionFn should return a boolean value, but got ${typeof conditionFnRes}\nconditionFn: ${conditionFn.toString()}\nstore: ${JSON.stringify(source._devName)}\nkeyOrFn: ${keyOrFn}\nselector: ${selector}`,
                             });
                         throw new Error(
-                            `[kore-js] TYPE_MISMATCH: conditionFn should return a boolean value, but got ${typeof conditionFnRes}`,
+                            `[koribot-js] TYPE_MISMATCH: conditionFn should return a boolean value, but got ${typeof conditionFnRes}`,
                         );
                     }
                     conditionFnRes && el.classList.add(_className);
@@ -364,7 +364,7 @@ export function $(selector, props = {}) {
                                 message: `source must be a "boolean" but received a typeof "${typeof source}": source->${JSON.stringify(source) || source} ${hasStore ? 'Store-> ' + source._devName : ''}`,
                             });
                         throw new Error(
-                            `[kore-js] TYPE_MISMATCH: source must be a "boolean" but received typeof "${typeof source}"`,
+                            `[koribot-js] TYPE_MISMATCH: source must be a "boolean" but received typeof "${typeof source}"`,
                         );
                     }
                     render(_source);
@@ -405,7 +405,7 @@ export function $(selector, props = {}) {
                                 message: `source must be a "boolean" but received a typeof "${typeof source}": source->${JSON.stringify(source) || source} ${hasStore ? 'Store-> ' + source._devName : ''}`,
                             });
                         throw new Error(
-                            `[kore-js] TYPE_MISMATCH: source must be a "boolean" but received typeof "${typeof source}"`,
+                            `[koribot-js] TYPE_MISMATCH: source must be a "boolean" but received typeof "${typeof source}"`,
                         );
                     }
                     render(_source);
@@ -440,7 +440,7 @@ export function $(selector, props = {}) {
                                     message: `uniquekeyFn must return a string or number but received a "${_key}"\n${hasStore && 'Store -> ' + source._devName}\nuniquekeyFn used -> ${getKey}\nitem -> ${JSON.stringify(item)}`,
                                 });
                             throw new Error(
-                                `[kore-js] TYPE_MISMATCH: uniquekeyFn must return a string or number but received "${_key}"`,
+                                `[koribot-js] TYPE_MISMATCH: uniquekeyFn must return a string or number but received "${_key}"`,
                             );
                         }
                         const rowKey = String(_key);
@@ -452,7 +452,7 @@ export function $(selector, props = {}) {
                                     message: `\n-Duplicate key "${rowKey}" found in each() list. Each key must be unique.\n-item->${JSON.stringify(item)}\n-You use this to derive key->${getKey}`,
                                 });
                             throw new Error(
-                                `[kore-js] DUPLICATE_KEY: Duplicate key "${rowKey}" found in each() list`,
+                                `[koribot-js] DUPLICATE_KEY: Duplicate key "${rowKey}" found in each() list`,
                             );
                         }
                         seen.add(rowKey);
@@ -470,7 +470,7 @@ export function $(selector, props = {}) {
                                             'each',
                                         );
                                     console.warn(
-                                        '[kore-js] (each) Template returned multiple root elements. Wrap them in a single parent.',
+                                        '[koribot-js] (each) Template returned multiple root elements. Wrap them in a single parent.',
                                     );
                                 }
 
@@ -494,7 +494,7 @@ export function $(selector, props = {}) {
                                         'each',
                                     );
                                 console.warn(
-                                    '[kore-js] (each) Template returned multiple root elements. Wrap them in a single parent.',
+                                    '[koribot-js] (each) Template returned multiple root elements. Wrap them in a single parent.',
                                 );
                             }
 
@@ -588,7 +588,7 @@ export function $(selector, props = {}) {
                             message: `Failed to find element with selector: ${_selector}`,
                         });
                     throw new Error(
-                        `[kore-js] INVALID_SELECTOR: Failed to find element with selector: ${_selector}`,
+                        `[koribot-js] INVALID_SELECTOR: Failed to find element with selector: ${_selector}`,
                     );
                 }
                 if (_el) found.push(_el);
@@ -611,7 +611,7 @@ export function $(selector, props = {}) {
                             message: `Failed to find element/elements with selector: ${_selector}`,
                         });
                     throw new Error(
-                        `[kore-js] ELEMENTS_NOT_FOUND: Failed to find element/elements with selector: ${_selector}`,
+                        `[koribot-js] ELEMENTS_NOT_FOUND: Failed to find element/elements with selector: ${_selector}`,
                     );
                 }
                 found.push(..._els);
@@ -641,7 +641,7 @@ export function $(selector, props = {}) {
                         // raw DOM node
                         el.appendChild(target);
                     } else if (__DEV__) {
-                        console.warn('[kore-js] (append) Unsupported target type:', typeof target);
+                        console.warn('[koribot-js] (append) Unsupported target type:', typeof target);
                     }
                 }
             });
@@ -663,7 +663,7 @@ export function $(selector, props = {}) {
                     } else if (target instanceof Node) {
                         el.insertBefore(target, el.firstChild);
                     } else if (__DEV__) {
-                        console.warn('[kore-js] (prepend) Unsupported target type:', typeof target);
+                        console.warn('[koribot-js] (prepend) Unsupported target type:', typeof target);
                     }
                 }
             });

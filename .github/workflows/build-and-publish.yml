@@ -20,8 +20,8 @@ jobs:
 
       - name: Copy README
         run: |
-          cp README.md kore-js/README.md
-          echo "✅ README.md copied to kore-js/"
+          cp README.md koribot-js/README.md
+          echo "✅ README.md copied to koribot-js/"
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -39,8 +39,8 @@ jobs:
         with:
           name: dist
           path: |
-            kore-js/dist/
-            kore-js/README.md
+            koribot-js/dist/
+            koribot-js/README.md
 
   publish:
     needs: build
@@ -54,7 +54,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist
-          path: kore-js/
+          path: koribot-js/
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -67,7 +67,7 @@ jobs:
 
       - name: Check if version already published
         id: version_check
-        working-directory: ./kore-js
+        working-directory: ./koribot-js
         run: |
           LOCAL_VERSION=$(node -p "require('./package.json').version")
           PACKAGE_NAME=$(node -p "require('./package.json').name")
@@ -82,7 +82,7 @@ jobs:
 
       - name: Publish to npm
         if: steps.version_check.outputs.skip == 'false'
-        working-directory: ./kore-js
+        working-directory: ./koribot-js
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

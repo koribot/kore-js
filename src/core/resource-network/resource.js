@@ -1,4 +1,4 @@
-// kore-js/resource.js
+// koribot-js/resource.js
 // Store-friendly fetch wrapper.
 // Wire it to your store via callbacks, or use it standalone.
 

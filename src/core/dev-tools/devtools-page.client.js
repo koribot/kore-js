@@ -1,4 +1,4 @@
-// kore-js/devtools-page.client.js  (CLIENT ONLY)
+// koribot-js/devtools-page.client.js  (CLIENT ONLY)
 
 export function initPagePanel() {
     const body = document.getElementById('kor-panel-page-body');

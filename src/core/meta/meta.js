@@ -1,4 +1,4 @@
-// kore-js/meta.js
+// koribot-js/meta.js
 
 import { isStore } from '../store/store.js';
 // TODO: uncomment when client-side navigation (SPA) feature is implemented.

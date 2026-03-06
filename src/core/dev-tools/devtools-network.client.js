@@ -1,4 +1,4 @@
-// kore-js/devtools-network.client.js  (CLIENT ONLY)
+// koribot-js/devtools-network.client.js  (CLIENT ONLY)
 // Intercepts fetch() globally and logs every request/response.
 // The interceptor is installed once when initNetworkPanel() is called.
 

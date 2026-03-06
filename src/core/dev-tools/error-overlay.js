@@ -1,12 +1,12 @@
 let overlayEl = null;
 
 const ERROR_TYPES = {
-    ELEMENT_NOT_FOUND: (message) => `[kore-js] Element not found: ${message}`,
-    ELEMENTS_NOT_FOUND: (message) => `[kore-js] Elements not found: ${message}`,
-    INVALID_SELECTOR: (message) => `[kore-js] Invalid selector: ${message}`,
-    STORE_KEY_MISSING: (message) => `[kore-js] Store key does not exist: ${message}`,
-    UNKNOWN: (message) => `[kore-js] Unknown runtime error: ${message || ''}`,
-    TYPE_MISMATCH: (message) => `[kore-js] Type mismatch: ${message}`,
+    ELEMENT_NOT_FOUND: (message) => `[koribot-js] Element not found: ${message}`,
+    ELEMENTS_NOT_FOUND: (message) => `[koribot-js] Elements not found: ${message}`,
+    INVALID_SELECTOR: (message) => `[koribot-js] Invalid selector: ${message}`,
+    STORE_KEY_MISSING: (message) => `[koribot-js] Store key does not exist: ${message}`,
+    UNKNOWN: (message) => `[koribot-js] Unknown runtime error: ${message || ''}`,
+    TYPE_MISMATCH: (message) => `[koribot-js] Type mismatch: ${message}`,
 };
 
 function createOverlay() {
@@ -25,7 +25,7 @@ function createOverlay() {
       overflow:auto;
     ">
       <div style="display:flex;justify-content:space-between;">
-        <h2 style="margin:0;color:#ff4d4f;">Kore-js Error</h2>
+        <h2 style="margin:0;color:#ff4d4f;">koribot-js Error</h2>
         <button id="__kor_close__"
           style="background:#222;color:white;border:1px solid #555;padding:6px 10px;cursor:pointer;">
           ✕
@@ -51,7 +51,7 @@ function createOverlay() {
 
 export function reportError({ type = '', message = '', cause = null, fatal = true } = {}) {
     const resolver = ERROR_TYPES[type];
-    const finalMessage = resolver ? resolver(message) : `[kore-js] ${type}: ${message}`;
+    const finalMessage = resolver ? resolver(message) : `[koribot-js] ${type}: ${message}`;
 
     const error = new Error(finalMessage);
 

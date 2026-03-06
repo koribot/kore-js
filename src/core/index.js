@@ -1,4 +1,4 @@
-// kore-js/index.js
+// koribot-js/index.js
 export { createStore, isStore }                     from './store/store.js';
 export { $ }                                        from './dom/dom.js';
 export { navigate }                                 from './router/navigate.js';

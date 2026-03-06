@@ -1,4 +1,4 @@
-// kore-js/index.d.ts
+// koribot-js/index.d.ts
 
 // ── HTML ──────────────────────────────────────────────────────────────────────
 
@@ -41,7 +41,7 @@ export interface IStore<T extends object = object> {
  * These do NOT exist in production builds — accessing them in prod will return `undefined`.
  * Use `Partial<IStoreDevMethods>` when typing a store that may be in dev or prod.
  *
- * Available via the kore-js devtools panel to inspect store internals at runtime.
+ * Available via the koribot-js devtools panel to inspect store internals at runtime.
  */
 export interface IStoreDevMethods {
     /**
@@ -1091,7 +1091,7 @@ export function onDomReadyState(
  * reactive updates that re-run automatically on every `setState()`.
  *
  * @example
- * import { meta } from 'kore-js'
+ * import { meta } from 'koribot-js'
  *
  * // static
  * meta.title('My Page')

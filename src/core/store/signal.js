@@ -2,7 +2,7 @@
 // I did not delete it for reference
 // We are using store.js for simplicity
 
-// kore-js/signal.js
+// koribot-js/signal.js
 // Reactive core — state(), effect(), computed()
 //
 // Supports property-level dependency tracking for object/array signals via

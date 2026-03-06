@@ -31,7 +31,7 @@ export function _resolveElement(selector) {
                 });
             }
             throw new Error(
-                `[kore-js] FAILED_TO_CREATE_ELEMENT: Failed to create Element for selector: $('${selector}')`,
+                `[koribot-js] FAILED_TO_CREATE_ELEMENT: Failed to create Element for selector: $('${selector}')`,
             );
         }
 
@@ -45,7 +45,7 @@ export function _resolveElement(selector) {
                 });
             }
             throw new Error(
-                `[kore-js] FAILED_TO_CREATE_ELEMENT: No elements were created from: $('${selector}')`,
+                `[koribot-js] FAILED_TO_CREATE_ELEMENT: No elements were created from: $('${selector}')`,
             );
         }
 
@@ -67,7 +67,7 @@ export function _resolveElement(selector) {
                         message: `No elements found for selectors: $('${selector.join(', ')}')`,
                     });
                 throw new Error(
-                    `[kore-js] ELEMENT_NOT_FOUND: No elements found for selectors: $('${selector.join(', ')}')`,
+                    `[koribot-js] ELEMENT_NOT_FOUND: No elements found for selectors: $('${selector.join(', ')}')`,
                 );
             }
             return els;
@@ -96,7 +96,7 @@ export function _resolveElement(selector) {
             }
 
             throw new Error(
-                `[kore-js] ELEMENT_NOT_FOUND: Failed to find element for selector: ${formatted}`,
+                `[koribot-js] ELEMENT_NOT_FOUND: Failed to find element for selector: ${formatted}`,
             );
         }
     }
@@ -112,7 +112,7 @@ export function _resolveElement(selector) {
             });
         }
         throw new Error(
-            `[kore-js] ELEMENT_NOT_FOUND: Element not found for selector: ${formatted}`,
+            `[koribot-js] ELEMENT_NOT_FOUND: Element not found for selector: ${formatted}`,
         );
     }
 

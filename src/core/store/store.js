@@ -152,7 +152,7 @@ export function isStore(v) {
   );
 }
 
-// // kore-js/store.js
+// // koribot-js/store.js
 // "use strict"
 // export function createStore(initial, _name) {
 //   let _state = { ...initial };

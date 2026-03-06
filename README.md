@@ -1,4 +1,4 @@
-# kore-js
+# koribot-js
 
 A small frontend utility library for JavaScript inspired by jQuery to manipulate the DOM with a built-in reactive store.
 
@@ -21,7 +21,7 @@ A small frontend utility library for JavaScript inspired by jQuery to manipulate
     ```js
      npm run build
 
-     // the build-output will be on kore-js/dist
+     // the build-output will be on koribot-js/dist
     ```
 
 # APIs
@@ -99,8 +99,8 @@ A small frontend utility library for JavaScript inspired by jQuery to manipulate
 
 # Output
 
-- `kore-js.js` — minified, production build
-- `kore-js.dev.js` — development build with devtools, error overlay, and runtime warnings/errors
+- `koribot-js.js` — minified, production build
+- `koribot-js.dev.js` — development build with devtools, error overlay, and runtime warnings/errors
 
 # Note
 

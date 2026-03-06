@@ -1,5 +1,5 @@
 // build.js
-// Bundles kore-js/index.js → korjs/korjs.js using esbuild.
+// Bundles koribot-js/index.js → korjs/korjs.js using esbuild.
 import { build } from "esbuild";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
@@ -8,8 +8,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 // ── 1. Bundle ────────────────────────────────────────────────────────────────
 await build({
   entryPoints: [join(__dirname, "../core/index.js")],
-  //outfile: join(__dirname, "../../../kore-testing/node_modules/kore-js/dist/kore-js.dev.js"),
-  outfile: join(__dirname, "../../kore-js/dist/kore-js.dev.js"),
+  //outfile: join(__dirname, "../../../kore-testing/node_modules/koribot-js/dist/koribot-js.dev.js"),
+  outfile: join(__dirname, "../../koribot-js/dist/koribot-js.dev.js"),
   bundle: true,
   format: "esm",
   minify: false,
@@ -22,4 +22,4 @@ await build({
   },
 });
 
-console.log("✅ Built kore-js.dev.js");
+console.log("✅ Built koribot-js.dev.js");

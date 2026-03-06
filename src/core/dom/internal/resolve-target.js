@@ -12,6 +12,6 @@ export function _resolveTarget(target) {
         template.innerHTML = target;
         return template.content;
     }
-    if (__DEV__) console.warn('[kore-js] Unsupported target type passed to DOM method:', typeof target);
+    if (__DEV__) console.warn('[koribot-js] Unsupported target type passed to DOM method:', typeof target);
     return null;
 }

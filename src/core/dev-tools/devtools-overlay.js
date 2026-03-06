@@ -1,4 +1,4 @@
-// kore-js/devtools-overlay.js  (CLIENT ONLY — injected by index.js in __DEV__)
+// koribot-js/devtools-overlay.js  (CLIENT ONLY — injected by index.js in __DEV__)
 
 export function mountDevtools() {
   const panels = [
